@@ -1,0 +1,54 @@
+# BookBesties Tracker
+
+Mobilny dziennik czytelniczy i społecznościowy tracker dla polskiej społeczności BookBesties.
+
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Supabase Auth + Postgres
+- Netlify-ready deployment config
+
+## Local Setup
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open `http://localhost:3000/home`.
+
+## Environment
+
+Copy `.env.example` to `.env.local` and add Supabase values:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+## Supabase
+
+Run `supabase/schema.sql` in Supabase SQL Editor. It creates:
+
+- `profiles`
+- `books`
+- `user_books`
+- `reading_goals`
+- `reading_sessions`
+- public-safe leaderboard views
+- row-level security policies
+
+## Netlify
+
+This repo includes `netlify.toml`.
+
+Netlify settings:
+
+- Build command: `pnpm build`
+- Publish directory: `.next`
+- Node version: `22`
+- Package manager: `pnpm`
+
+Add the same Supabase environment variables in Netlify before production use.
