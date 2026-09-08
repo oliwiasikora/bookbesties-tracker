@@ -38,9 +38,8 @@ This repo includes `netlify.toml`.
 
 Netlify settings:
 
-- Build command: `pnpm build`
+- Build command: `npm run build`
 - Publish directory: `.next`
 - Node version: `22`
-- Package manager: `pnpm`
 
 Add the same Supabase environment variables in Netlify before production use.
