@@ -30,15 +30,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 ## Supabase
 
-Run `supabase/schema.sql` in Supabase SQL Editor. It creates:
-
-- `profiles`
-- `books`
-- `user_books`
-- `reading_goals`
-- `reading_sessions`
-- public-safe leaderboard views
-- row-level security policies
+Run `supabase/schema.sql` in Supabase SQL Editor.
 
 ## Netlify
 
